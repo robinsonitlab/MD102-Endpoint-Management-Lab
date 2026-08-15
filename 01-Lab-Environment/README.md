@@ -83,7 +83,7 @@ Examples:
 - [x] Test user licensed for Intune
 - [x] Microsoft Entra device join configured
 - [x] Intune automatic enrollment configured
-- [ ] Windows device enrolled
+- [x] Windows device enrolled
 - [ ] Configuration profiles
 - [ ] Compliance policies
 - [ ] Conditional Access
