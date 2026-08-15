@@ -233,3 +233,16 @@ The following command was used to verify the Microsoft Entra join:
 
 ```powershell
 dsregcmd /status
+
+## What I Learned
+
+Microsoft Entra ID controls identity and device join permissions.
+Intune provides endpoint management capabilities for Windows devices.
+Automatic MDM enrollment connects Microsoft Entra device joining
+with Intune device management.
+Group-based assignment allows enrollment settings to be targeted
+to specific users.
+Separating administrator and test-user accounts provides a more
+realistic enterprise management model.
+dsregcmd /status can be used to troubleshoot and verify
+Microsoft Entra device registration and join status.
