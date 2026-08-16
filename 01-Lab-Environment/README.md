@@ -84,6 +84,10 @@ Examples:
 - [x] Microsoft Entra device join configured
 - [x] Intune automatic enrollment configured
 - [x] Windows device enrolled
+- [x] Enrollment restrictions verified
+- [x] Windows 11 VM joined to Microsoft Entra ID
+- [x] AzureAdJoined verified
+- [x] Intune device enrollment verified
 - [ ] Configuration profiles
 - [ ] Compliance policies
 - [ ] Conditional Access
