@@ -231,7 +231,7 @@ Microsoft Entra ID using the John Smith test account.
 
 The following command was used to verify the Microsoft Entra join:
 
-```powershell
+powershell
 dsregcmd /status
 
 # Intune Configuration Profiles
