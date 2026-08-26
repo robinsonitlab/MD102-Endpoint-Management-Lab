@@ -47,6 +47,9 @@ C:\Program Files\7-Zip
 ## Assignment
 
 The application was assigned as:
+
 **Required**
+
 Target group:
+
 **GRP-Intune-Users**
