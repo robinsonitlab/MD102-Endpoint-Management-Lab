@@ -28,3 +28,5 @@ Output:
 
 ```text
 7z2501-x64.exe /S
+
+**## Uninstall Command**
