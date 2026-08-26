@@ -84,3 +84,29 @@ Intune subsequently reported:
 * System installation allows applications to install without requiring the user to perform the installation.
 * Intune reporting can be used to verify application deployment.
 * Endpoint verification is important in addition to Intune reporting.
+
+## Deployment Workflow
+1. Download application installer.
+2. Create packaging directory.
+3. Package installer with Win32 Content Prep Tool.
+4. Upload .intunewin package to Intune.
+5. Configure installation commands.
+6. Configure requirements.
+7. Configure detection rule.
+8. Assign application to test group.
+9. Sync endpoint.
+10. Verify application installation.
+11. Verify Intune installation status.
+
+## Status
+[*] Download application
+* Package application
+* Upload to Intune
+* Configure install command
+* Configure uninstall command
+* Configure requirements
+* Configure detection rule
+* Assign application
+* Deploy application
+* Verify application on endpoint
+* Verify Intune status
