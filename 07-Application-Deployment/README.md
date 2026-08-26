@@ -53,3 +53,18 @@ The application was assigned as:
 Target group:
 
 **GRP-Intune-Users**
+
+## Test Device
+
+Device: MD102-WIN11-01
+
+User: John Smith
+
+7-Zip was successfully deployed to the Windows 11 test device.
+
+The application was verified on the endpoint using:
+</> PowerShell
+Test-Path "C:\Program Files\7-Zip\7zFM.exe"
+
+Result:
+True
