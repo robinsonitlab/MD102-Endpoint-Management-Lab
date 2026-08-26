@@ -99,7 +99,7 @@ Intune subsequently reported:
 11. Verify Intune installation status.
 
 ## Status
-[x] Download application
+- [x] Download application
 * Package application
 * Upload to Intune
 * Configure install command
