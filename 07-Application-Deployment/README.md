@@ -100,13 +100,13 @@ Intune subsequently reported:
 
 ## Status
 - [x] Download application
-* Package application
-* Upload to Intune
-* Configure install command
-* Configure uninstall command
-* Configure requirements
-* Configure detection rule
-* Assign application
-* Deploy application
-* Verify application on endpoint
-* Verify Intune status
+- [x] Package application
+- [x] Upload to Intune
+- [x] Configure install command
+- [x] Configure uninstall command
+- [x] Configure requirements
+- [x] Configure detection rule
+- [x] Assign application
+- [x] Deploy application
+- [x] Verify application on endpoint
+- [x] Verify Intune status
