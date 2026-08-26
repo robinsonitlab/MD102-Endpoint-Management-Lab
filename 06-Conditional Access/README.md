@@ -112,3 +112,37 @@ MD102-WIN11-01
 - [x] Verify Conditional Access failure
 - [x] Restore device compliance
 - [x] Verify final compliant state
+## Troubleshooting: Compliance Status Did Not Immediately Update
+
+### Problem
+
+BitLocker was fully encrypted and Windows reported:
+
+- VolumeStatus: FullyEncrypted
+- ProtectionStatus: On
+- EncryptionPercentage: 100%
+
+However, Intune continued to report the device as noncompliant.
+
+### Investigation
+
+Windows MDM logs showed DeviceStatus/CertAttestation activity.
+
+The device had been encrypted after the previous boot.
+
+### Resolution
+
+The Windows 11 VM was restarted to allow the device health
+attestation state to be refreshed.
+
+After rebooting and synchronizing with Intune, the device changed to:
+
+**Compliant**
+
+### Lesson Learned
+
+Some Intune compliance checks rely on device health attestation
+information that is measured during the Windows boot process.
+
+A reboot may therefore be required after changing security
+configuration such as BitLocker encryption.
