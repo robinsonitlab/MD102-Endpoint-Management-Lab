@@ -35,5 +35,15 @@ Output:
 ## Detection Rule
 
 **Detection Type:** File
+
 **Path**
 C:\Program Files\7-Zip
+
+**File**
+7zFM.exe
+
+**Detection Method:** File or folder exists
+
+##Assignment##
+The application was assigned as:
+Required
