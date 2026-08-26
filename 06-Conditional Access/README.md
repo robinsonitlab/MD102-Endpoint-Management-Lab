@@ -2,8 +2,8 @@
 
 ## Objective
 
-Create and test a Conditional Access policy requiring users to access
-cloud resources from devices marked compliant by Microsoft Intune.
+Create and test a Conditional Access policy that requires users to
+access cloud resources from a device marked compliant by Microsoft Intune.
 
 ## Conditional Access Policy
 
@@ -15,43 +15,53 @@ cloud resources from devices marked compliant by Microsoft Intune.
 
 **Grant control:** Require device to be marked as compliant
 
-**Policy mode:** Report-only
+**Mode:** Report-only
 
-## Prerequisites
+## Test Environment
 
-The Windows 11 test device was enrolled in Microsoft Intune and assigned
-the following compliance policy:
+**Device:** MD102-WIN11-01
 
-COMP-Windows11-Baseline
+**User:** John Smith
 
-The device was required to have BitLocker enabled.
+**Compliance Policy:** COMP-Windows11-Baseline
 
-## Compliance Status
+## Test 1 — Compliant Device
 
-Before remediation:
-
-**MD102-WIN11-01 — Noncompliant**
-
-Reason:
-
-**BitLocker — Not compliant**
-
-After enabling BitLocker:
-
-**MD102-WIN11-01 — Compliant**
-
-## Conditional Access Testing
-
-A new sign-in was performed using John Smith.
+The Windows 11 device was compliant because BitLocker was enabled.
 
 The Conditional Access policy was evaluated in Report-only mode.
 
-### Result
+**Result: Success**
 
-**CA-Require-Compliant-Device — Success**
+This demonstrated that a compliant device satisfies the Conditional
+Access requirement.
 
-The policy successfully evaluated the sign-in while requiring the device
-to be marked as compliant.
+## Test 2 — Noncompliant Device
+
+BitLocker was temporarily disabled on the Windows 11 test device.
+
+Intune subsequently reported:
+
+**Device: Noncompliant**
+
+A new John Smith sign-in was performed.
+
+The Conditional Access policy reported:
+
+**Failure**
+
+Because the policy was in Report-only mode, access was not actually
+blocked. The result demonstrated that the sign-in would have been
+blocked if the policy were enabled.
+
+## Test 3 — Device Remediation
+
+BitLocker was re-enabled and the Windows 11 device was synchronized
+with Intune.
+
+Final status:
+
+**MD102-WIN11-01 — Compliant**
 
 ## Architecture
 
@@ -70,35 +80,35 @@ Require compliant device
 Microsoft Intune
     |
     v
+COMP-Windows11-Baseline
+    |
+    v
+BitLocker
+    |
+    v
 MD102-WIN11-01
-    |
-    v
-Compliance Policy
-    |
-    v
-BitLocker = Enabled
-    |
-    v
-COMPLIANT
 
 ## What I Learned
 
-- Conditional Access controls access to cloud resources based on conditions.
-- Intune compliance policies determine whether a device meets security requirements.
 - Conditional Access can use Intune compliance as an access-control signal.
-- Report-only mode allows policies to be tested before enforcement.
+- Report-only mode allows Conditional Access policies to be tested safely.
+- A compliant device can satisfy a Conditional Access requirement.
+- A noncompliant device causes the Conditional Access requirement to fail.
+- Compliance status and Conditional Access work together to enforce
+  endpoint security.
 - Security Defaults and custom Conditional Access policies are separate
   security approaches.
-- Disabling Security Defaults in the lab allowed custom Conditional Access
-  policies to be tested.
+- Troubleshooting requires testing both the endpoint and cloud service.
 
 ## Status
 
 - [x] Create Conditional Access policy
-- [x] Target test user
-- [x] Target cloud resources
+- [x] Target John Smith
+- [x] Target all resources
 - [x] Require compliant device
 - [x] Configure Report-only mode
-- [x] Generate test sign-in
-- [x] Verify Conditional Access evaluation
-- [x] Policy result = Success
+- [x] Test compliant device
+- [x] Test noncompliant device
+- [x] Verify Conditional Access failure
+- [x] Restore device compliance
+- [x] Verify final compliant state
