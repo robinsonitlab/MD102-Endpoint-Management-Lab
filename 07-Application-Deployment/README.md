@@ -71,3 +71,16 @@ Test-Path "C:\Program Files\7-Zip\7zFM.exe"
 Result:
 
 True
+
+Intune subsequently reported:
+
+**Device install status: Installed**
+
+## What I Learned
+* Win32 applications must be packaged into an .intunewin file.
+* The Microsoft Win32 Content Prep Tool can package Windows installers.
+* Intune uses detection rules to determine whether an application is installed.
+* Applications can be assigned as Required to Entra security groups.
+* System installation allows applications to install without requiring the user to perform the installation.
+* Intune reporting can be used to verify application deployment.
+* Endpoint verification is important in addition to Intune reporting.
