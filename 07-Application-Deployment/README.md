@@ -26,7 +26,14 @@ Output:
 
 ## Installation Command
 
-```text
 7z2501-x64.exe /S
 
-**## Uninstall Command**
+## Uninstall Command
+
+"C:\Program Files\7-Zip\Uninstall.exe" /S
+
+## Detection Rule
+
+**Detection Type:** File
+**Path**
+C:\Program Files\7-Zip
