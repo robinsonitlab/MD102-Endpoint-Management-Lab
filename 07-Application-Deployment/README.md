@@ -44,6 +44,9 @@ C:\Program Files\7-Zip
 
 **Detection Method:** File or folder exists
 
-##Assignment##
+## Assignment
+
 The application was assigned as:
-Required
+**Required**
+Target group:
+**GRP-Intune-Users**
