@@ -25,8 +25,7 @@ Get-MpComputerStatus | Select-Object `
     RealTimeProtectionEnabled,
     BehaviorMonitorEnabled,
     IoavProtectionEnabled,
-    AMServiceEnabled
----
+    AMServiceEnabled---
 
 # Next — Microsoft Defender Firewall
 
