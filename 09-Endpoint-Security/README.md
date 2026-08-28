@@ -33,7 +33,6 @@ The required Defender components returned:
 
 This confirmed that the Microsoft Defender Antivirus configuration was successfully applied to the endpoint.
 
-
 ---
 
 # Next — Microsoft Defender Firewall
