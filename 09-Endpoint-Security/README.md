@@ -26,7 +26,7 @@ Get-MpComputerStatus | Select-Object `
     BehaviorMonitorEnabled,
     IoavProtectionEnabled,
     AMServiceEnabled
-
+'''
 The required Defender components returned:
 
 **True
