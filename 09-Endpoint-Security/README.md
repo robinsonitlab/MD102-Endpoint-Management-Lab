@@ -19,32 +19,10 @@ The Windows 11 test device was synchronized with Microsoft Intune.
 
 PowerShell was used to verify Microsoft Defender status:
 
-'''powershell
+```powershell
 Get-MpComputerStatus | Select-Object `
     AntivirusEnabled,
     RealTimeProtectionEnabled,
     BehaviorMonitorEnabled,
     IoavProtectionEnabled,
     AMServiceEnabled
-
-
-
-The required Defender components returned:
-
-**True
-
-This confirmed that the Microsoft Defender Antivirus configuration was successfully applied to the endpoint.
-
----
-
-# Next — Microsoft Defender Firewall
-
-Now we'll add another important endpoint-security skill:
-
-**Intune → Endpoint Security → Firewall → Windows Firewall**
-
-We'll create:
-
-```text
-SEC-WindowsFirewall-Baseline
-
