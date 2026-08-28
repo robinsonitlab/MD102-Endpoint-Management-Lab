@@ -26,3 +26,16 @@ Get-MpComputerStatus | Select-Object `
     BehaviorMonitorEnabled,
     IoavProtectionEnabled,
     AMServiceEnabled
+
+---
+
+# Next — Microsoft Defender Firewall
+
+Now we'll add another important endpoint-security skill:
+
+**Intune → Endpoint Security → Firewall → Windows Firewall**
+
+We'll create:
+
+```text
+SEC-WindowsFirewall-Baseline
