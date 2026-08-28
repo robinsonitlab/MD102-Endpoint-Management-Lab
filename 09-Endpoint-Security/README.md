@@ -19,12 +19,15 @@ The Windows 11 test device was synchronized with Microsoft Intune.
 
 PowerShell was used to verify Microsoft Defender status:
 
+'''powershell
 Get-MpComputerStatus | Select-Object `
     AntivirusEnabled,
     RealTimeProtectionEnabled,
     BehaviorMonitorEnabled,
     IoavProtectionEnabled,
     AMServiceEnabled
+
+
 
 The required Defender components returned:
 
