@@ -29,7 +29,7 @@ Get-MpComputerStatus | Select-Object `
 
 The required Defender components returned:
 
-**True**
+**True
 
 This confirmed that the Microsoft Defender Antivirus configuration was successfully applied to the endpoint.
 
