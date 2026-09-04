@@ -53,9 +53,6 @@ During the lab I encountered and resolved:
 - Device Health Attestation behavior
 - Win32 application deployment verification
 
-## Lab Architecture
-
-[Insert architecture diagram]
 
 ## Documentation
 
