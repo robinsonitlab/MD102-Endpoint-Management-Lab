@@ -28,13 +28,28 @@ Get-MpComputerStatus | Select-Object `
     AMServiceEnabled
 ```
 
-# Next — Microsoft Defender Firewall
+## Windows Firewall Profile Verification
 
-Now we'll add another important endpoint-security skill:
+The Windows 11 test device was synchronized with Microsoft Intune.
 
-**Intune → Endpoint Security → Firewall → Windows Firewall**
+The firewall profiles were verified locally using PowerShell:
 
-We'll create:
+```powershell
+Get-NetFirewallProfile |
+    Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
+```
+
+Result:
 
 ```text
-SEC-WindowsFirewall-Baseline
+Domain   True   NotConfigured   NotConfigured
+Private  True   NotConfigured   NotConfigured
+Public   True   NotConfigured   NotConfigured
+```
+
+All three Windows Firewall profiles were successfully enabled
+through the Intune policy.
+
+The default inbound and outbound actions were intentionally left
+NotConfigured because this lab exercise focused on centrally
+enabling the firewall profiles.
